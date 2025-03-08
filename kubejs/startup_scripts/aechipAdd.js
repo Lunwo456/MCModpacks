@@ -1,0 +1,11 @@
+//添加ae相关的格雷芯片
+StartupEvents.registry("item",event=>{
+    //晶圆
+    event.create("morechip:calculation_wafer")
+    event.create("morechip:engineering_wafer")
+    event.create("morechip:logic_wafer")
+    //芯片
+    event.create("morechip:calculation_chip")
+    event.create("morechip:engineering_chip")
+    event.create("morechip:logic_chip")
+})
