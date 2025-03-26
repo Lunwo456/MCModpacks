@@ -4,8 +4,10 @@ StartupEvents.registry("item",event=>{
     event.create("morechip:calculation_wafer")
     event.create("morechip:engineering_wafer")
     event.create("morechip:logic_wafer")
+    event.create("morechip:accumulation_wafer")
     //芯片
     event.create("morechip:calculation_chip")
     event.create("morechip:engineering_chip")
     event.create("morechip:logic_chip")
+    event.create("morechip:accumulation_chip")
 })
