@@ -12,4 +12,22 @@ ServerEvents.recipes(event => {
     event.remove({id:'gtceu:forming_press/credit_cupronickel'})
     //时间之瓶
     event.remove({output:'tiab:time_in_a_bottle'})
+    //铱
+    event.remove({mod:'alltheores', output:'gtceu:iridium_ingot'})
+    event.remove({mod:'alltheores', output:'gtceu:iridium_dust'})
+    //event.remove({mod:'alltheores', output:'gtceu:raw_iridium'})
+    event.remove({output:'alltheores:iridium_clump'})
+    event.remove({output:'alltheores:iridium_shard'})
+    event.remove({id:'alltheores:mek_processing/iridium/slurry/dirty'})
+    event.remove({id:'alltheores:mek_processing/iridium/slurry/dirty/from_raw_block'})
+    event.remove({id:'alltheores:mek_processing/iridium/slurry/dirty_from_raw'})
+    event.remove({id:'alltheores:mek_processing/iridium/slurry/clean'})
+    event.remove({id:'alltheores:mek_processing/iridium/dirty_dust/from_clump'})
+    event.remove({output:'alltheores:iridium_crystal'})
+    event.remove({input:'alltheores:iridium_crystal'})
+    event.remove({id:'enderio:smelting/alltheores/iridium_ingot_from_ore'})
+    event.remove({id:'enderio:smelting/alltheores/iridium_ingot_from_dust'})
+    event.remove({id:'enderio:smelting/alltheores/iridium_ingot_from_raw'})
+    //拆解台
+    event.remove({type:'twilightforest:uncrafting'})
 })
