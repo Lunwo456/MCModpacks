@@ -1,6 +1,6 @@
 GTCEuServerEvents.oreVeins(event => {
     event.add("kubejs:osmium_n_vein", vein => {
-        vein.weight(20)
+        vein.weight(10)
         vein.clusterSize(40)
         vein.density(0.3)
         vein.discardChanceOnAirExposure(0)
@@ -21,7 +21,7 @@ GTCEuServerEvents.oreVeins(event => {
         )
     })
     event.add("kubejs:osmium_n_d_vein", vein => {
-        vein.weight(20)
+        vein.weight(10)
         vein.clusterSize(40)
         vein.density(0.3)
         vein.discardChanceOnAirExposure(0)
@@ -42,7 +42,7 @@ GTCEuServerEvents.oreVeins(event => {
         )
     })
     event.add("kubejs:osmium_c_vein", vein => {
-        vein.weight(20)
+        vein.weight(10)
         vein.clusterSize(40)
         vein.density(0.3)
         vein.discardChanceOnAirExposure(0)
@@ -63,7 +63,7 @@ GTCEuServerEvents.oreVeins(event => {
         )
     })
     event.add("kubejs:osmium_c_d_vein", vein => {
-        vein.weight(20)
+        vein.weight(10)
         vein.clusterSize(40)
         vein.density(0.3)
         vein.discardChanceOnAirExposure(0)
