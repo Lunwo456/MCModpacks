@@ -1,18 +1,15 @@
 ServerEvents.recipes(event => {
     //洗矿机
-    event.remove({id:'industrialforegoing:washing_factory'})
-    event.shaped('industrialforegoing:washing_factory',[
-        'YRY',
-        'DZD',
-        'GJG'
-    ],{
-        Y:'gtceu:iridium_ingot',
-        R:'industrialforegoing:meat_feeder',
-        D:'gtceu:epoxy_plate',
-        Z:'ifeu:ultimate_machine_frame',
-        G:'gtceu:hsss_gear',
-        J:'gtceu:luv_ore_washer'
-    }).id('kubejs:washing_factory');
+    event.replaceInput(
+        {id:'industrialforegoing:washing_factory'},
+        'industrialforegoing:plastic',
+        'gtceu:epoxy_plate'
+    )
+    event.replaceInput(
+        {id:'industrialforegoing:washing_factory'},
+        'gtceu:diamond_gear',
+        'gtceu:titanium_gear'
+    )
     //流体筛分
     event.replaceInput(
         {id:'industrialforegoing:fluid_sieving_machine'},
@@ -34,5 +31,10 @@ ServerEvents.recipes(event => {
         {id:'industrialforegoing:fermentation_station'},
         'industrialforegoing:machine_frame_simple',
         'industrialforegoing:machine_frame_advanced'
+    )
+    event.replaceInput(
+        {id:'industrialforegoing:fermentation_station'},
+        'thermal:gold_gear',
+        'gtceu:titanium_gear'
     )
 })
