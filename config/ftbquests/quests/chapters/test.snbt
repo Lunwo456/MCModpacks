@@ -1,0 +1,19 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "test"
+	group: ""
+	id: "74464E3AB1B76B9E"
+	images: [{
+		height: 64.0d
+		image: "add_picture:textures/periodic_table.png"
+		rotation: 0.0d
+		width: 95.0d
+		x: 4.5d
+		y: -3.0d
+	}]
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+	title: "test"
+}

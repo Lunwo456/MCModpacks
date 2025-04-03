@@ -16,4 +16,6 @@ ServerEvents.recipes(event => {
     event.remove({mod:'alltheores', input:'gtceu:iridium_dust', output:'gtceu:iridium_ingot'})
     //拆解台
     event.remove({id:'twilightforest:uncrafting_table'})
+    //硅岩
+    event.remove({id:'sgjourney:naquadah_alloy'})
 })
