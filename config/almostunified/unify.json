@@ -1,14 +1,18 @@
 {
   "modPriorities": [
-    "gtceu",
-    "minecraft",
     "kubejs",
+    "botania",
+    "gtceu",
+    "gtnn",
+    "minecraft",
     "crafttweaker",
     "create",
     "thermal",
     "immersiveengineering",
     "mekanism",
-    "ae2"
+    "ae2",
+    "alltheores",
+    "sgjourney"
   ],
   "stoneStrata": [
     "stone",
@@ -30,9 +34,7 @@
     "forge:rods/{material}",
     "forge:wires/{material}",
     "forge:storage_blocks/{material}",
-    "forge:storage_blocks/raw_{material}",
-    "forge:silicon",
-    "forge:dusts/certus_quartz"
+    "forge:storage_blocks/raw_{material}"
   ],
   "materials": [
     "aeternium",
@@ -81,7 +83,8 @@
     "tin",
     "tungsten",
     "uranium",
-    "zinc"
+    "zinc",
+    "elementium"
   ],
   "priorityOverrides": {},
   "customTags": {},
