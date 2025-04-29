@@ -1,0 +1,10 @@
+StartupEvents.registry("item",event=>{
+    event.create("miningdrone:mining_drone_lv")
+    event.create("miningdrone:mining_drone_mv")
+    event.create("miningdrone:mining_drone_hv")
+    event.create("miningdrone:mining_drone_ev")
+    event.create("miningdrone:mining_drone_iv")
+    event.create("miningdrone:mining_drone_luv")
+    event.create("miningdrone:mining_drone_zpm")
+    event.create("miningdrone:mining_drone_uv")
+})
