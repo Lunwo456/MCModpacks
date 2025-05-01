@@ -212,6 +212,6 @@ ServerEvents.recipes(event => {
             b.researchStack(
                 Item.of('miningdrone:mining_drone_luv')
             )
-            .EUt(GTValues.VA[GTValues.EV])
+            .EUt(GTValues.VA[GTValues.IV])
             .duration(420))
 })
