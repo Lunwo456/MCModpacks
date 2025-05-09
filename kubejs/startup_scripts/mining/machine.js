@@ -2,7 +2,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type',event => {
     event.create('mining_drone')
         .category('mining_drone')
         .setEUIO('in')
-        .setMaxIOSize(2, 9, 1, 0)
+        .setMaxIOSize(2, 18, 1, 0)
         .setSound(GTSoundEntries.BATH)
 });
 
