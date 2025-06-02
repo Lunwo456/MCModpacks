@@ -18,12 +18,14 @@ ServerEvents.tags('item', event => {
     event.add('forge:rods/aluminium', 'immersiveengineering:stick_aluminum')
     event.add('forge:rods/aluminum', 'gtceu:aluminium_rod')
     //铝矿
-    event.add('forge:ores/bauxite','immersiveengineering:ore_aluminum')
+    event.add('forge:ores/bauxite', 'immersiveengineering:ore_aluminum')
     event.remove('forge:ores/aluminum', 'immersiveengineering:ore_aluminum')
-    event.add('forge:ores/bauxite','immersiveengineering:deepslate_ore_aluminum')
+    event.add('forge:ores/bauxite', 'immersiveengineering:deepslate_ore_aluminum')
     event.remove('forge:ores/aluminum', 'immersiveengineering:deepslate_ore_aluminum')
     const have_aluminum_ore = event.get('forge:ores/aluminum').getObjectIds()
     event.add('forge:ores/aluminium', have_aluminum_ore)
     const have_aluminium_ore = event.get('forge:ores/aluminium').getObjectIds()
     event.add('forge:ores/aluminum', have_aluminium_ore)
+    //石英粉
+    event.add('forge:dusts/quartz', 'gtceu:nether_quartz_dust')
 })
