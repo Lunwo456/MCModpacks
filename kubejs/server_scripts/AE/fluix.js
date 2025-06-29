@@ -8,7 +8,7 @@ ServerEvents.recipes(event => {
             'gtceu:nether_quartz_dust'
         )
         .itemOutputs(
-            '2x ae2:fluix_dust'
+            '3x ae2:fluix_dust'
         )
         .duration(40)
         .EUt(32)

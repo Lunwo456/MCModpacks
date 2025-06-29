@@ -18,4 +18,13 @@ ServerEvents.recipes(event => {
     event.remove({id:'twilightforest:uncrafting_table'})
     //硅岩
     event.remove({id:'sgjourney:naquadah_alloy'})
+    //删除无尽添加的创造物品配方
+    event.remove({id:'avaritia:mek_creative_fluid_tank'})//mek储罐
+    event.remove({id:'avaritia:mek_creative_chemical_tank'})//mek化学品储罐
+    event.remove({id:'avaritia:mek_creative_energy_cube'})//mek能量立方
+    event.remove({id:'avaritia:mek_creative_bin'})//mek箱柜
+    event.remove({id:'avaritia:botania_creative_pool'})//永恒魔力池
+    event.remove({id:'avaritia:botania_mana_tablet'})//魔力石板
+    event.remove({id:'avaritia:eio_creative_power'})//eio创造能源
+    event.remove({id:'avaritia:ae2_creative_energy_cell'})//ae2创造能源元件
 })

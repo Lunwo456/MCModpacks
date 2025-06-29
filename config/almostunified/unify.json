@@ -12,7 +12,8 @@
     "mekanism",
     "ae2",
     "alltheores",
-    "sgjourney"
+    "sgjourney",
+    "avaritia"
   ],
   "stoneStrata": [
     "stone",
@@ -51,6 +52,7 @@
     "coal",
     "coal_coke",
     "cobalt",
+    "conductive_alloy",
     "constantan",
     "copper",
     "diamond",
@@ -58,9 +60,11 @@
     "elementium",
     "emerald",
     "enderium",
+    "end_steel",
     "fluorite",
     "gold",
     "graphite",
+    "infinity",
     "invar",
     "iridium",
     "iron",
@@ -85,11 +89,22 @@
     "tin",
     "tungsten",
     "uranium",
+    "vibrant_alloy",
     "zinc",
     "elementium"
   ],
   "priorityOverrides": {},
-  "customTags": {},
+  "customTags": {
+  "forge:ingots/infinity": [
+   "avaritia:infinity_ingot"
+  ],
+  "forge:storage_blocks/infinity": [
+   "avaritia:infinity"
+  ],
+  "forge:nuggets/infinity": [
+   "avaritia:infinity_nugget"
+  ]
+  },
   "tagOwnerships": {},
   "itemTagInheritanceMode": "ALLOW",
   "itemTagInheritance": {},
