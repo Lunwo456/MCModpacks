@@ -27,4 +27,13 @@ ServerEvents.recipes(event => {
     event.remove({id:'avaritia:botania_mana_tablet'})//魔力石板
     event.remove({id:'avaritia:eio_creative_power'})//eio创造能源
     event.remove({id:'avaritia:ae2_creative_energy_cell'})//ae2创造能源元件
+    //区块加载
+    event.replaceInput(
+        {id:"mekanism:dimensional_stabilizer"},
+        'minecraft:diamond_block','mekanism:upgrade_anchor'
+    )
+    event.replaceInput(
+        {id:"mekanism:upgrade/anchor"},
+        '#forge:dusts/diamond','create_power_loader:brass_chunk_loader'
+    )
 })

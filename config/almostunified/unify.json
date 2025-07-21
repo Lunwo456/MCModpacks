@@ -71,6 +71,7 @@
     "lapis",
     "lead",
     "lumium",
+    "mana_steel",
     "mithril",
     "netherite",
     "nickel",
@@ -86,6 +87,7 @@
     "silver",
     "steel",
     "sulfur",
+    "terra_steel",
     "tin",
     "tungsten",
     "uranium",
@@ -96,13 +98,19 @@
   "priorityOverrides": {},
   "customTags": {
   "forge:ingots/infinity": [
-   "avaritia:infinity_ingot"
+    "avaritia:infinity_ingot"
   ],
   "forge:storage_blocks/infinity": [
-   "avaritia:infinity"
+    "avaritia:infinity"
   ],
   "forge:nuggets/infinity": [
-   "avaritia:infinity_nugget"
+    "avaritia:infinity_nugget"
+  ],
+  "forge:ingots/mana_steel": [
+    "botania:manasteel_ingot"
+  ],
+  "forge:ingots/terra_steel": [
+    "botania:terrasteel_ingot"
   ]
   },
   "tagOwnerships": {},
