@@ -37,6 +37,40 @@ ServerEvents.recipes(event => {
             .duration(200)
             .EUt(150000)
             .cleanroom(CleanroomType.CLEANROOM)
+
+        GTR.circuit_assembler('gtceu:exotic_processor_uv/' + i)
+            .itemInputs(
+                '8x gtceu:magic_smd_transistor',
+                '4x gtceu:magic_smd_capacitor',
+                '4x gtceu:fine_magic_alloy_wire',
+                'gtceu:exotic_processing_core',
+                'gtceu:magic_soc_chip',
+                '4x gtceu:qbit_cpu_chip'
+            )
+            .inputFluids(
+                Fluid.of(F[i], n[i])
+            )
+            .itemOutputs('4x gtceu:exotic_processor_uv')
+            .duration(200)
+            .EUt(500000)
+            .cleanroom(CleanroomType.CLEANROOM)
+
+        GTR.circuit_assembler('gtceu:exotic_processor_uhv/' + i)
+            .itemInputs(
+                'gtceu:magic_printed_circuit_board',
+                '2x gtceu:exotic_processor_uv',
+                '8x gtceu:magic_smd_inductor',
+                '16x gtceu:magic_smd_capacitor',
+                '32x gtceu:ram_chip',
+                '16x gtceu:fine_magic_alloy_wire'
+            )
+            .inputFluids(
+                Fluid.of(F[i], n[i])
+            )
+            .itemOutputs('2x gtceu:exotic_processor_uhv')
+            .duration(200)
+            .EUt(500000)
+            .cleanroom(CleanroomType.CLEANROOM)
     }
     //装配线
     GTR.assembly_line('gtceu:optical_quantum_processor_uhv')
@@ -102,6 +136,23 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:optical_quantum_processing_core')
         .duration(100)
         .EUt(120000)
+        .cleanroom(CleanroomType.CLEANROOM)
+    //奇异
+    GTR.assembler('gtceu:exotic_processing_core')
+        .itemInputs(
+            '4x gtceu:graphene_plate',
+            '2x gtceu:polybenzimidazole_foil',
+            '8x gtceu:fine_magic_alloy_wire',
+            '4x gtceu:magic_smd_resistor',
+            '4x gtceu:magic_smd_diode',
+            'ae2:spatial_cell_component_128',
+        )
+        .inputFluids(
+            Fluid.of("gtceu:soldering_alloy", 144)
+        )
+        .itemOutputs('gtceu:exotic_processing_core')
+        .duration(100)
+        .EUt(160000)
         .cleanroom(CleanroomType.CLEANROOM)
     //其他
     GTR.wiremill('gtceu:fine_pikyonium_64_y_wire')
@@ -276,4 +327,80 @@ ServerEvents.recipes(event => {
         .duration(200)
         .EUt(120000)
         .cleanroom(CleanroomType.CLEANROOM)
+    //无尽装备
+    GTR.assembly_line('gtceu:infinity_helmet')
+        .itemInputs(
+            'bloodmagic:livinghelmet',
+            'mythicbotany:alfsteel_helmet',
+            'advanced_ae:quantum_helmet',
+            'allthemodium:unobtainium_helmet',
+            'mekanism:mekasuit_helmet',
+            'gtceu:quarktech_helmet',
+            'gtceu:zpm_field_generator',
+            'gtceu:gravi_star'
+        )
+        .inputFluids(
+            Fluid.of('gtceu:infinity', 2304),
+            Fluid.of('gtceu:neutronium', 1152)
+        )
+        .itemOutputs('avaritia:infinity_helmet')
+        .duration(1200)
+        .EUt(GTValues.V[GTValues.ZPM])
+    
+    GTR.assembly_line('gtceu:infinity_chestplate')
+        .itemInputs(
+            'bloodmagic:livingplate',
+            'mythicbotany:alfsteel_chestplate',
+            'advanced_ae:quantum_chestplate',
+            'allthemodium:unobtainium_chestplate',
+            'mekanism:mekasuit_bodyarmor',
+            'gtceu:advanced_quarktech_chestplate',
+            'gtceu:zpm_field_generator',
+            'gtceu:gravi_star'
+        )
+        .inputFluids(
+            Fluid.of('gtceu:infinity', 2304),
+            Fluid.of('gtceu:neutronium', 1152)
+        )
+        .itemOutputs('avaritia:infinity_chestplate')
+        .duration(1200)
+        .EUt(GTValues.V[GTValues.ZPM])
+    
+    GTR.assembly_line('gtceu:infinity_pants')
+        .itemInputs(
+            'bloodmagic:livingleggings',
+            'mythicbotany:alfsteel_leggings',
+            'advanced_ae:quantum_leggings',
+            'allthemodium:unobtainium_leggings',
+            'mekanism:mekasuit_pants',
+            'gtceu:quarktech_leggings',
+            'gtceu:zpm_field_generator',
+            'gtceu:gravi_star'
+        )
+        .inputFluids(
+            Fluid.of('gtceu:infinity', 2304),
+            Fluid.of('gtceu:neutronium', 1152)
+        )
+        .itemOutputs('avaritia:infinity_pants')
+        .duration(1200)
+        .EUt(GTValues.V[GTValues.ZPM])
+    
+    GTR.assembly_line('gtceu:infinity_boots')
+        .itemInputs(
+            'bloodmagic:livingboots',
+            'mythicbotany:alfsteel_boots',
+            'advanced_ae:quantum_boots',
+            'allthemodium:unobtainium_boots',
+            'mekanism:mekasuit_boots',
+            'gtceu:quarktech_boots',
+            'gtceu:zpm_field_generator',
+            'gtceu:gravi_star'
+        )
+        .inputFluids(
+            Fluid.of('gtceu:infinity', 2304),
+            Fluid.of('gtceu:neutronium', 1152)
+        )
+        .itemOutputs('avaritia:infinity_boots')
+        .duration(1200)
+        .EUt(GTValues.V[GTValues.ZPM])
 })

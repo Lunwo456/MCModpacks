@@ -30,15 +30,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
             GTMaterialFlags.GENERATE_FINE_WIRE
         )
         .cableProperties(GTValues.V[GTValues.MV], 2, 1, false)
-    
-    event.create('exotic')
-        .plasma(10000)
-        .color(0x9b00ff)
-        .secondaryColor(0x8800e6)
-
-    event.create('cosmic')
-        .liquid(100000)
-        .color(0x000000)
 
     event.create('inconel792')
         .color(0x6CF076)
@@ -73,5 +64,5 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
             GTMaterialFlags.GENERATE_PLATE,
             GTMaterialFlags.GENERATE_RING
         )
-        .blastTemp(1800, 'highest', GTValues.VA[GTValues.ZPM], 150)
+        .blastTemp(1800, 'highest', GTValues.VA[GTValues.UV], 150)
 })

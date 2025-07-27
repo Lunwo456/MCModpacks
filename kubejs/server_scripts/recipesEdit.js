@@ -27,6 +27,11 @@ ServerEvents.recipes(event => {
     event.remove({id:'avaritia:botania_mana_tablet'})//魔力石板
     event.remove({id:'avaritia:eio_creative_power'})//eio创造能源
     event.remove({id:'avaritia:ae2_creative_energy_cell'})//ae2创造能源元件
+    //无尽装备
+    event.remove({id:'avaritia:infinity_helmet'})
+    event.remove({id:'avaritia:infinity_chestplate'})
+    event.remove({id:'avaritia:infinity_pants'})
+    event.remove({id:'avaritia:infinity_boots'})
     //区块加载
     event.replaceInput(
         {id:"mekanism:dimensional_stabilizer"},
