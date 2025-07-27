@@ -37,6 +37,40 @@ ServerEvents.recipes(event => {
             .duration(200)
             .EUt(150000)
             .cleanroom(CleanroomType.CLEANROOM)
+
+        GTR.circuit_assembler('gtceu:exotic_processor_uv/' + i)
+            .itemInputs(
+                '8x gtceu:magic_smd_transistor',
+                '4x gtceu:magic_smd_capacitor',
+                '4x gtceu:fine_magic_alloy_wire',
+                'gtceu:exotic_processing_core',
+                'gtceu:magic_soc_chip',
+                '4x gtceu:qbit_cpu_chip'
+            )
+            .inputFluids(
+                Fluid.of(F[i], n[i])
+            )
+            .itemOutputs('4x gtceu:exotic_processor_uv')
+            .duration(200)
+            .EUt(500000)
+            .cleanroom(CleanroomType.CLEANROOM)
+
+        GTR.circuit_assembler('gtceu:exotic_processor_uhv/' + i)
+            .itemInputs(
+                'gtceu:magic_printed_circuit_board',
+                '2x gtceu:exotic_processor_uv',
+                '8x gtceu:magic_smd_inductor',
+                '16x gtceu:magic_smd_capacitor',
+                '32x gtceu:ram_chip',
+                '16x gtceu:fine_magic_alloy_wire'
+            )
+            .inputFluids(
+                Fluid.of(F[i], n[i])
+            )
+            .itemOutputs('2x gtceu:exotic_processor_uhv')
+            .duration(200)
+            .EUt(500000)
+            .cleanroom(CleanroomType.CLEANROOM)
     }
     //装配线
     GTR.assembly_line('gtceu:optical_quantum_processor_uhv')
@@ -102,6 +136,23 @@ ServerEvents.recipes(event => {
         .itemOutputs('gtceu:optical_quantum_processing_core')
         .duration(100)
         .EUt(120000)
+        .cleanroom(CleanroomType.CLEANROOM)
+    //奇异
+    GTR.assembler('gtceu:exotic_processing_core')
+        .itemInputs(
+            '4x gtceu:graphene_plate',
+            '2x gtceu:polybenzimidazole_foil',
+            '8x gtceu:fine_magic_alloy_wire',
+            '4x gtceu:magic_smd_resistor',
+            '4x gtceu:magic_smd_diode',
+            'ae2:spatial_cell_component_128',
+        )
+        .inputFluids(
+            Fluid.of("gtceu:soldering_alloy", 144)
+        )
+        .itemOutputs('gtceu:exotic_processing_core')
+        .duration(100)
+        .EUt(160000)
         .cleanroom(CleanroomType.CLEANROOM)
     //其他
     GTR.wiremill('gtceu:fine_pikyonium_64_y_wire')
