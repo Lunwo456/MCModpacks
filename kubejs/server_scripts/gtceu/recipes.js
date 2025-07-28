@@ -344,7 +344,7 @@ ServerEvents.recipes(event => {
             Fluid.of('gtceu:neutronium', 1152)
         )
         .itemOutputs('avaritia:infinity_helmet')
-        .duration(1200)
+        .duration(600)
         .EUt(GTValues.V[GTValues.ZPM])
     
     GTR.assembly_line('gtceu:infinity_chestplate')
@@ -363,7 +363,7 @@ ServerEvents.recipes(event => {
             Fluid.of('gtceu:neutronium', 1152)
         )
         .itemOutputs('avaritia:infinity_chestplate')
-        .duration(1200)
+        .duration(600)
         .EUt(GTValues.V[GTValues.ZPM])
     
     GTR.assembly_line('gtceu:infinity_pants')
@@ -382,7 +382,7 @@ ServerEvents.recipes(event => {
             Fluid.of('gtceu:neutronium', 1152)
         )
         .itemOutputs('avaritia:infinity_pants')
-        .duration(1200)
+        .duration(600)
         .EUt(GTValues.V[GTValues.ZPM])
     
     GTR.assembly_line('gtceu:infinity_boots')
@@ -401,6 +401,6 @@ ServerEvents.recipes(event => {
             Fluid.of('gtceu:neutronium', 1152)
         )
         .itemOutputs('avaritia:infinity_boots')
-        .duration(1200)
+        .duration(600)
         .EUt(GTValues.V[GTValues.ZPM])
 })
