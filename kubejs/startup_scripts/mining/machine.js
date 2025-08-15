@@ -1,5 +1,6 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type',event => {
     event.create('mining_drone')
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .category('mining_drone')
         .setEUIO('in')
         .setMaxIOSize(2, 18, 1, 0)
