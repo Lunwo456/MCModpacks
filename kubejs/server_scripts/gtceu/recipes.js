@@ -6,8 +6,8 @@ ServerEvents.recipes(event => {
         ["gtceu:soldering_alloy", 72, 2]
     ]
     materials.forEach(
-        (material) => {
-            GTR.circuit_assembler('gtceu:optical_quantum_processor_zpm_/' + material[2])
+        (material, index) => {
+            GTR.circuit_assembler('gtceu:optical_quantum_processor_zpm_/' + index)
             .itemInputs(
                 '8x gtceu:advanced_smd_transistor',
                 '4x gtceu:advanced_smd_capacitor',
@@ -24,7 +24,7 @@ ServerEvents.recipes(event => {
             .EUt(150000)
             .cleanroom(CleanroomType.CLEANROOM)
 
-            GTR.circuit_assembler('gtceu:optical_quantum_processor_uv/' + material[2])
+            GTR.circuit_assembler('gtceu:optical_quantum_processor_uv/' + index)
             .itemInputs(
                 'gtceu:ha_printed_circuit_board',
                 '2x gtceu:optical_quantum_processor_zpm',
@@ -41,7 +41,7 @@ ServerEvents.recipes(event => {
             .EUt(150000)
             .cleanroom(CleanroomType.CLEANROOM)
 
-            GTR.circuit_assembler('gtceu:exotic_processor_uv/' + material[2])
+            GTR.circuit_assembler('gtceu:exotic_processor_uv/' + index)
             .itemInputs(
                 '8x gtceu:magic_smd_transistor',
                 '4x gtceu:magic_smd_capacitor',
@@ -58,7 +58,7 @@ ServerEvents.recipes(event => {
             .EUt(500000)
             .cleanroom(CleanroomType.CLEANROOM)
 
-            GTR.circuit_assembler('gtceu:exotic_processor_uhv/' + material[2])
+            GTR.circuit_assembler('gtceu:exotic_processor_uhv/' + index)
             .itemInputs(
                 'gtceu:magic_printed_circuit_board',
                 '2x gtceu:exotic_processor_uv',

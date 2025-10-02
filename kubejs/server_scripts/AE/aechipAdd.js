@@ -1,463 +1,197 @@
 ServerEvents.recipes(event => {
     const GTR = event.recipes.gtceu
-    //蚀刻运算晶圆
-    GTR.laser_engraver('morechip:calculation_wafer/1')
-        .itemInputs(
-            'gtceu:silicon_wafer'
-        )
-        .notConsumable(
-            'ae2:calculation_processor_press'
-        )
-        .itemOutputs(
-            'morechip:calculation_wafer'
-        )
-        .duration(900)
-        .EUt(120)
-    GTR.laser_engraver('morechip:calculation_wafer/2')
-        .itemInputs(
-            'gtceu:phosphorus_wafer'
-        )
-        .notConsumable(
-            'ae2:calculation_processor_press'
-        )
-        .itemOutputs(
-            '4x morechip:calculation_wafer'
-        )
-        .duration(500)
-        .EUt(480)
-    GTR.laser_engraver('morechip:calculation_wafer/3')
-        .itemInputs(
-            'gtceu:naquadah_wafer'
-        )
-        .notConsumable(
-            'ae2:calculation_processor_press'
-        )
-        .itemOutputs(
-            '8x morechip:calculation_wafer'
-        )
-        .duration(200)
-        .EUt(1920)
-    GTR.laser_engraver('morechip:calculation_wafer/4')
-        .itemInputs(
-            'gtceu:neutronium_wafer'
-        )
-        .notConsumable(
-            'ae2:calculation_processor_press'
-        )
-        .itemOutputs(
-            '16x morechip:calculation_wafer'
-        )
-        .duration(50)
-        .EUt(7680)
-    //蚀刻工程晶圆
-    GTR.laser_engraver('morechip:engineering_wafer/1')
-        .itemInputs(
-            'gtceu:silicon_wafer'
-        )
-        .notConsumable(
-            'ae2:engineering_processor_press'
-        )
-        .itemOutputs(
-            'morechip:engineering_wafer'
-        )
-        .duration(900)
-        .EUt(120)
-    GTR.laser_engraver('morechip:engineering_wafer/2')
-        .itemInputs(
-            'gtceu:phosphorus_wafer'
-        )
-        .notConsumable(
-            'ae2:engineering_processor_press'
-        )
-        .itemOutputs(
-            '4x morechip:engineering_wafer'
-        )
-        .duration(500)
-        .EUt(480)
-    GTR.laser_engraver('morechip:engineering_wafer/3')
-        .itemInputs(
-            'gtceu:naquadah_wafer'
-        )
-        .notConsumable(
-            'ae2:engineering_processor_press'
-        )
-        .itemOutputs(
-            '8x morechip:engineering_wafer'
-        )
-        .duration(200)
-        .EUt(1920)
-    GTR.laser_engraver('morechip:engineering_wafer/4')
-        .itemInputs(
-            'gtceu:neutronium_wafer'
-        )
-        .notConsumable(
-            'ae2:engineering_processor_press'
-        )
-        .itemOutputs(
-            '16x morechip:engineering_wafer'
-        )
-        .duration(50)
-        .EUt(7680)
-    //蚀刻逻辑晶圆
-    GTR.laser_engraver('morechip:logic_wafer/1')
-        .itemInputs(
-            'gtceu:silicon_wafer'
-        )
-        .notConsumable(
-            'ae2:logic_processor_press'
-        )
-        .itemOutputs(
-            'morechip:logic_wafer'
-        )
-        .duration(900)
-        .EUt(120)
-    GTR.laser_engraver('morechip:logic_wafer/2')
-        .itemInputs(
-            'gtceu:phosphorus_wafer'
-        )
-        .notConsumable(
-            'ae2:logic_processor_press'
-        )
-        .itemOutputs(
-            '4x morechip:logic_wafer'
-        )
-        .duration(500)
-        .EUt(480)
-    GTR.laser_engraver('morechip:logic_wafer/3')
-        .itemInputs(
-            'gtceu:naquadah_wafer'
-        )
-        .notConsumable(
-            'ae2:logic_processor_press'
-        )
-        .itemOutputs(
-            '8x morechip:logic_wafer'
-        )
-        .duration(200)
-        .EUt(1920)
-    GTR.laser_engraver('morechip:logic_wafer/4')
-        .itemInputs(
-            'gtceu:neutronium_wafer'
-        )
-        .notConsumable(
-            'ae2:logic_processor_press'
-        )
-        .itemOutputs(
-            '16x morechip:logic_wafer'
-        )
-        .duration(50)
-        .EUt(7680)
-    //蚀刻累积晶圆
-    GTR.laser_engraver('morechip:accumulation_wafer/1')
-        .itemInputs(
-            'gtceu:silicon_wafer'
-        )
-        .notConsumable(
-            'megacells.accumulation_processor_press'
-        )
-        .itemOutputs(
-            'morechip:accumulation_wafer'
-        )
-        .duration(900)
-        .EUt(120)
-    GTR.laser_engraver('morechip:accumulation_wafer/2')
-        .itemInputs(
-            'gtceu:phosphorus_wafer'
-        )
-        .notConsumable(
-            'megacells.accumulation_processor_press'
-        )
-        .itemOutputs(
-            '4x morechip:accumulation_wafer'
-        )
-        .duration(500)
-        .EUt(480)
-    GTR.laser_engraver('morechip:accumulation_wafer/3')
-        .itemInputs(
-            'gtceu:naquadah_wafer'
-        )
-        .notConsumable(
-            'megacells.accumulation_processor_press'
-        )
-        .itemOutputs(
-            '8x morechip:accumulation_wafer'
-        )
-        .duration(200)
-        .EUt(1920)
-    GTR.laser_engraver('morechip:accumulation_wafer/4')
-        .itemInputs(
-            'gtceu:neutronium_wafer'
-        )
-        .notConsumable(
-            'megacells.accumulation_processor_press'
-        )
-        .itemOutputs(
-            '16x morechip:accumulation_wafer'
-        )
-        .duration(50)
-        .EUt(7680)
-    //切割运算晶圆
-    GTR.cutter('morechip:calculation_chip/1')
-        .itemInputs(
-            'morechip:calculation_wafer'
-        )
-        .inputFluids(
-            Fluid.of('minecraft:water', 270)
-        )
-        .itemOutputs(
-            '32x morechip:calculation_chip'
-        )
-        .duration(1800)
-        .EUt(96)
-    GTR.cutter('morechip:calculation_chip/2')
-        .itemInputs(
-            'morechip:calculation_wafer'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:distilled_water', 202)
-        )
-        .itemOutputs(
-            '32x morechip:calculation_chip'
-        )
-        .duration(1350)
-        .EUt(96)
-    GTR.cutter('morechip:calculation_chip/3')
-        .itemInputs(
-            'morechip:calculation_wafer'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:lubricant', 67)
-        )
-        .itemOutputs(
-            '32x morechip:calculation_chip'
-        )
-        .duration(900)
-        .EUt(96)
-    //切割工程晶圆
-    GTR.cutter('morechip:engineering_chip/1')
-        .itemInputs(
-            'morechip:engineering_wafer'
-        )
-        .inputFluids(
-            Fluid.of('minecraft:water', 270)
-        )
-        .itemOutputs(
-            '32x morechip:engineering_chip'
-        )
-        .duration(1800)
-        .EUt(96)
-    GTR.cutter('morechip:engineering_chip/2')
-        .itemInputs(
-            'morechip:engineering_wafer'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:distilled_water', 202)
-        )
-        .itemOutputs(
-            '32x morechip:engineering_chip'
-        )
-        .duration(1350)
-        .EUt(96)
-    GTR.cutter('morechip:engineering_chip/3')
-        .itemInputs(
-            'morechip:engineering_wafer'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:lubricant', 67)
-        )
-        .itemOutputs(
-            '32x morechip:engineering_chip'
-        )
-        .duration(900)
-        .EUt(96)
-    //切割逻辑晶圆
-    GTR.cutter('morechip:logic_chip/1')
-        .itemInputs(
-            'morechip:logic_wafer'
-        )
-        .inputFluids(
-            Fluid.of('minecraft:water', 270)
-        )
-        .itemOutputs(
-            '32x morechip:logic_chip'
-        )
-        .duration(1800)
-        .EUt(96)
-    GTR.cutter('morechip:logic_chip/2')
-        .itemInputs(
-            'morechip:logic_wafer'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:distilled_water', 202)
-        )
-        .itemOutputs(
-            '32x morechip:logic_chip'
-        )
-        .duration(1350)
-        .EUt(96)
-    GTR.cutter('morechip:logic_chip/3')
-        .itemInputs(
-            'morechip:logic_wafer'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:lubricant', 67)
-        )
-        .itemOutputs(
-            '32x morechip:logic_chip'
-        )
-        .duration(900)
-        .EUt(96)
-    //切割累积晶圆
-    GTR.cutter('morechip:accumulation_chip/1')
-        .itemInputs(
-            'morechip:accumulation_wafer'
-        )
-        .inputFluids(
-            Fluid.of('minecraft:water', 270)
-        )
-        .itemOutputs(
-            '32x morechip:accumulation_chip'
-        )
-        .duration(1800)
-        .EUt(96)
-    GTR.cutter('morechip:accumulation_chip/2')
-        .itemInputs(
-            'morechip:accumulation_wafer'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:distilled_water', 202)
-        )
-        .itemOutputs(
-            '32x morechip:accumulation_chip'
-        )
-        .duration(1350)
-        .EUt(96)
-    GTR.cutter('morechip:accumulation_chip/3')
-        .itemInputs(
-            'morechip:accumulation_wafer'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:lubricant', 67)
-        )
-        .itemOutputs(
-            '32x morechip:accumulation_chip'
-        )
-        .duration(900)
-        .EUt(96)
-    //合成运算处理器
-    GTR.circuit_assembler('ae2:calculation_processor/1')
-        .itemInputs(
-            'gtceu:resin_printed_circuit_board',
-            '2x morechip:calculation_chip',
-            'gtceu:red_alloy_single_wire'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:soldering_alloy', 72)
-        )
-        .itemOutputs(
-            '2x ae2:calculation_processor'
-        )
-        .duration(100)
-        .EUt(16)
-    GTR.circuit_assembler('ae2:calculation_processor/2')
-        .itemInputs(
-            'gtceu:resin_printed_circuit_board',
-            '2x morechip:calculation_chip',
-            'gtceu:red_alloy_single_wire'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:tin', 144)
-        )
-        .itemOutputs(
-            '2x ae2:calculation_processor'
-        )
-        .duration(100)
-        .EUt(16)
-    //合成工程处理器
-    GTR.circuit_assembler('ae2:engineering_processor/1')
-        .itemInputs(
-            'gtceu:resin_printed_circuit_board',
-            '2x morechip:engineering_chip',
-            'gtceu:red_alloy_single_wire'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:soldering_alloy', 72)
-        )
-        .itemOutputs(
-            '2x ae2:engineering_processor'
-        )
-        .duration(100)
-        .EUt(16)
-    GTR.circuit_assembler('ae2:engineering_processor/2')
-        .itemInputs(
-            'gtceu:resin_printed_circuit_board',
-            '2x morechip:engineering_chip',
-            'gtceu:red_alloy_single_wire'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:tin', 144)
-        )
-        .itemOutputs(
-            '2x ae2:engineering_processor'
-        )
-        .duration(100)
-        .EUt(16)
-    //合成逻辑处理器
-    GTR.circuit_assembler('ae2:logic_processor/1')
-        .itemInputs(
-            'gtceu:resin_printed_circuit_board',
-            '2x morechip:logic_chip',
-            'gtceu:red_alloy_single_wire'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:soldering_alloy', 72)
-        )
-        .itemOutputs(
-            '2x ae2:logic_processor'
-        )
-        .duration(100)
-        .EUt(16)
-    GTR.circuit_assembler('ae2:logic_processor/2')
-        .itemInputs(
-            'gtceu:resin_printed_circuit_board',
-            '2x morechip:logic_chip',
-            'gtceu:red_alloy_single_wire'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:tin', 144)
-        )
-        .itemOutputs(
-            '2x ae2:logic_processor'
-        )
-        .duration(100)
-        .EUt(16)
-    //合成累积处理器
-    GTR.circuit_assembler('megacells:accumulation_processor/1')
-        .itemInputs(
-            'gtceu:resin_printed_circuit_board',
-            '2x morechip:accumulation_chip',
-            'gtceu:red_alloy_single_wire'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:soldering_alloy', 72)
-        )
-        .itemOutputs(
-            '2x megacells:accumulation_processor'
-        )
-        .duration(100)
-        .EUt(16)
-    GTR.circuit_assembler('megacells:accumulation_processor/2')
-        .itemInputs(
-            'gtceu:resin_printed_circuit_board',
-            '2x morechip:accumulation_chip',
-            'gtceu:red_alloy_single_wire'
-        )
-        .inputFluids(
-            Fluid.of('gtceu:tin', 144)
-        )
-        .itemOutputs(
-            '2x megacells:accumulation_processor'
-        )
-        .duration(100)
-        .EUt(16)
+//--------蚀刻--------
+    const lasers = [
+        ['gtceu:silicon_wafer', 1, 120],
+        ['gtceu:phosphorus_wafer', 4, 480],
+        ['gtceu:naquadah_wafer', 8, 1920],
+        ['gtceu:neutronium_wafer', 16, 7680]
+    ]
+    lasers.forEach(
+        (laser, index) =>{
+            //蚀刻运算晶圆
+            GTR.laser_engraver('morechip:calculation_wafer/' + index)
+                .itemInputs(
+                    laser[0]
+                )
+                .notConsumable(
+                    'ae2:calculation_processor_press'
+                )
+                .itemOutputs(
+                    laser[1] + 'x morechip:calculation_wafer'
+                )
+                .duration(40)
+                .EUt(laser[2])
+            //蚀刻工程晶圆
+            GTR.laser_engraver('morechip:engineering_wafer/' + index)
+                .itemInputs(
+                    laser[0]
+                )
+                .notConsumable(
+                    'ae2:engineering_processor_press'
+                )
+                .itemOutputs(
+                    laser[1] + 'x morechip:engineering_wafer'
+                )
+                .duration(40)
+                .EUt(laser[2])
+            //蚀刻逻辑晶圆
+            GTR.laser_engraver('morechip:logic_wafer/' + index)
+                .itemInputs(
+                    laser[0]
+                )
+                .notConsumable(
+                    'ae2:logic_processor_press'
+                )
+                .itemOutputs(
+                    laser[1] + 'x morechip:logic_wafer'
+                )
+                .duration(40)
+                .EUt(laser[2])
+            //蚀刻累积晶圆
+            GTR.laser_engraver('morechip:accumulation_wafer/' + index)
+                .itemInputs(
+                    laser[0]
+                )
+                .notConsumable(
+                    'megacells.accumulation_processor_press'
+                )
+                .itemOutputs(
+                    laser[1] + 'x morechip:accumulation_wafer'
+                )
+                .duration(40)
+                .EUt(laser[2])
+        }
+    )
+//--------切割--------
+    const cuttings = [
+        ['minecraft:water', 270, 200],
+        ['gtceu:distilled_water', 202, 150],
+        ['gtceu:lubricant', 67, 100]
+    ]
+    cuttings.forEach(
+        (cutting, index) => {
+            //切割运算晶圆
+            GTR.cutter('morechip:calculation_chip/' + index)
+                .itemInputs(
+                    'morechip:calculation_wafer'
+                )
+                .inputFluids(
+                    Fluid.of(cutting[0], cutting[1])
+                )
+                .itemOutputs(
+                    '32x morechip:calculation_chip'
+                )
+                .duration(cutting[2])
+                .EUt(96)
+            //切割工程晶圆
+            GTR.cutter('morechip:engineering_chip/' + index)
+                .itemInputs(
+                    'morechip:engineering_wafer'
+                )
+                .inputFluids(
+                    Fluid.of(cutting[0], cutting[1])
+                )
+                .itemOutputs(
+                    '32x morechip:engineering_chip'
+                )
+                .duration(cutting[2])
+                .EUt(96)
+            //切割逻辑晶圆
+            GTR.cutter('morechip:logic_chip/' + index)
+                .itemInputs(
+                    'morechip:logic_wafer'
+                )
+                .inputFluids(
+                    Fluid.of(cutting[0], cutting[1])
+                )
+                .itemOutputs(
+                    '32x morechip:logic_chip'
+                )
+                .duration(cutting[2])
+                .EUt(96)
+            //切割累积晶圆
+            GTR.cutter('morechip:accumulation_chip/' + index)
+                .itemInputs(
+                    'morechip:accumulation_wafer'
+                )
+                .inputFluids(
+                    Fluid.of(cutting[0], cutting[1])
+                )
+                .itemOutputs(
+                    '32x morechip:accumulation_chip'
+                )
+                .duration(cutting[2])
+                .EUt(96)
+        }
+    )
+//--------组装--------
+    const assemblers = [
+        ['gtceu:tin', 144],
+        ['gtceu:soldering_alloy', 72]
+    ]
+    assemblers.forEach(
+        (assembler, index) => {
+            //合成运算处理器
+            GTR.circuit_assembler('ae2:calculation_processor/' + index)
+                .itemInputs(
+                    'gtceu:resin_printed_circuit_board',
+                    '2x morechip:calculation_chip',
+                    'gtceu:red_alloy_single_wire'
+                )
+                .inputFluids(
+                    Fluid.of(assembler[0], assembler[1])
+                )
+                .itemOutputs(
+                    '2x ae2:calculation_processor'
+                )
+                .duration(100)
+                .EUt(16)
+            //合成工程处理器
+            GTR.circuit_assembler('ae2:engineering_processor/' + index)
+                .itemInputs(
+                    'gtceu:resin_printed_circuit_board',
+                    '2x morechip:engineering_chip',
+                    'gtceu:red_alloy_single_wire'
+                )
+                .inputFluids(
+                    Fluid.of(assembler[0], assembler[1])
+                )
+                .itemOutputs(
+                    '2x ae2:engineering_processor'
+                )
+                .duration(100)
+                .EUt(16)
+            //合成逻辑处理器
+            GTR.circuit_assembler('ae2:logic_processor/' + index)
+                .itemInputs(
+                    'gtceu:resin_printed_circuit_board',
+                    '2x morechip:logic_chip',
+                    'gtceu:red_alloy_single_wire'
+                )
+                .inputFluids(
+                    Fluid.of(assembler[0], assembler[1])
+                )
+                .itemOutputs(
+                    '2x ae2:logic_processor'
+                )
+                .duration(100)
+                .EUt(16)
+            //合成累积处理器
+            GTR.circuit_assembler('megacells:accumulation_processor/' + index)
+                .itemInputs(
+                    'gtceu:resin_printed_circuit_board',
+                    '2x morechip:accumulation_chip',
+                    'gtceu:red_alloy_single_wire'
+                )
+                .inputFluids(
+                    Fluid.of(assembler[0], assembler[1])
+                )
+                .itemOutputs(
+                    '2x megacells:accumulation_processor'
+                )
+                .duration(100)
+                .EUt(16)
+        }
+    )
 })
