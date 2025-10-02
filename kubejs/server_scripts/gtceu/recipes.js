@@ -1,10 +1,13 @@
 ServerEvents.recipes(event => {
     const GTR = event.recipes.gtceu
     //处理器
-    const F = ["gtceu:tin", "gtceu:soldering_alloy"]
-    const n = [144, 72]
-    for(var i = 0; i < 2; i++){
-        GTR.circuit_assembler('gtceu:optical_quantum_processor_zpm_0/' + i)
+    const materials = [
+        ["gtceu:tin", 144, 1],
+        ["gtceu:soldering_alloy", 72, 2]
+    ]
+    materials.forEach(
+        (material) => {
+            GTR.circuit_assembler('gtceu:optical_quantum_processor_zpm_/' + material[2])
             .itemInputs(
                 '8x gtceu:advanced_smd_transistor',
                 '4x gtceu:advanced_smd_capacitor',
@@ -14,14 +17,14 @@ ServerEvents.recipes(event => {
                 '2x gtceu:qbit_cpu_chip'
             )
             .inputFluids(
-                Fluid.of(F[i], n[i])
+                Fluid.of(material[0], material[1])
             )
             .itemOutputs('4x gtceu:optical_quantum_processor_zpm')
             .duration(200)
             .EUt(150000)
             .cleanroom(CleanroomType.CLEANROOM)
 
-        GTR.circuit_assembler('gtceu:optical_quantum_processor_uv/' + i)
+            GTR.circuit_assembler('gtceu:optical_quantum_processor_uv/' + material[2])
             .itemInputs(
                 'gtceu:ha_printed_circuit_board',
                 '2x gtceu:optical_quantum_processor_zpm',
@@ -31,14 +34,14 @@ ServerEvents.recipes(event => {
                 '16x gtceu:fine_pikyonium_64_y_wire'
             )
             .inputFluids(
-                Fluid.of(F[i], n[i])
+                Fluid.of(material[0], material[1])
             )
             .itemOutputs('2x gtceu:optical_quantum_processor_uv')
             .duration(200)
             .EUt(150000)
             .cleanroom(CleanroomType.CLEANROOM)
 
-        GTR.circuit_assembler('gtceu:exotic_processor_uv/' + i)
+            GTR.circuit_assembler('gtceu:exotic_processor_uv/' + material[2])
             .itemInputs(
                 '8x gtceu:magic_smd_transistor',
                 '4x gtceu:magic_smd_capacitor',
@@ -48,14 +51,14 @@ ServerEvents.recipes(event => {
                 '4x gtceu:qbit_cpu_chip'
             )
             .inputFluids(
-                Fluid.of(F[i], n[i])
+                Fluid.of(material[0], material[1])
             )
             .itemOutputs('4x gtceu:exotic_processor_uv')
             .duration(200)
             .EUt(500000)
             .cleanroom(CleanroomType.CLEANROOM)
 
-        GTR.circuit_assembler('gtceu:exotic_processor_uhv/' + i)
+            GTR.circuit_assembler('gtceu:exotic_processor_uhv/' + material[2])
             .itemInputs(
                 'gtceu:magic_printed_circuit_board',
                 '2x gtceu:exotic_processor_uv',
@@ -65,13 +68,15 @@ ServerEvents.recipes(event => {
                 '16x gtceu:fine_magic_alloy_wire'
             )
             .inputFluids(
-                Fluid.of(F[i], n[i])
+                Fluid.of(material[0], material[1])
             )
             .itemOutputs('2x gtceu:exotic_processor_uhv')
             .duration(200)
             .EUt(500000)
             .cleanroom(CleanroomType.CLEANROOM)
-    }
+        }
+    )
+    
     //装配线
     GTR.assembly_line('gtceu:optical_quantum_processor_uhv')
         .itemInputs(
@@ -117,7 +122,7 @@ ServerEvents.recipes(event => {
             .EUt(500000)
             .CWUt(108)
         )
-    //cpu
+    //--------CPU--------
     //光量子
     GTR.assembler('gtceu:optical_quantum_processing_core')
         .itemInputs(
@@ -154,7 +159,7 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(160000)
         .cleanroom(CleanroomType.CLEANROOM)
-    //其他
+    //--------其他--------
     GTR.wiremill('gtceu:fine_pikyonium_64_y_wire')
         .itemInputs('gtca:pikyonium64_y_ingot')
         .itemOutputs('8x gtceu:fine_pikyonium_64_y_wire')
@@ -185,7 +190,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('3x gtceu:magic_alloy_dust')
         .duration(200)
         .EUt(131072)
-    //贴片
+    //--------贴片--------
     GTR.assembly_line('gtceu:magic_smd_transistor')
         .itemInputs(
             "gtceu:magic_alloy_foil",
@@ -250,7 +255,7 @@ ServerEvents.recipes(event => {
         .itemOutputs('32x gtceu:magic_smd_inductor')
         .duration(160)
         .EUt(65536)
-    //soc
+    //--------SoC--------
     GTR.chemical_reactor('gtceu:magic_soc_wafer')
         .itemInputs(
             'gtceu:highly_advanced_soc_wafer',
@@ -301,7 +306,7 @@ ServerEvents.recipes(event => {
         .duration(400)
         .EUt(131072)
         .cleanroom(CleanroomType.CLEANROOM)
-    //pcb
+    //--------PCB--------
     GTR.chemical_reactor('gtceu:ha_printed_circuit_board')
         .itemInputs(
             'gtceu:neutronium_plate',
@@ -327,7 +332,7 @@ ServerEvents.recipes(event => {
         .duration(200)
         .EUt(120000)
         .cleanroom(CleanroomType.CLEANROOM)
-    //无尽装备
+    //--------无尽装备--------
     GTR.assembly_line('gtceu:infinity_helmet')
         .itemInputs(
             'bloodmagic:livinghelmet',
