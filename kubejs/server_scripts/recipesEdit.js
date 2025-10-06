@@ -41,4 +41,15 @@ ServerEvents.recipes(event => {
         {id:"mekanism:upgrade/anchor"},
         '#forge:dusts/diamond','create_power_loader:brass_chunk_loader'
     )
+    //健胃消食片
+    event.remove({id:'indigestion_tablet:indigestion_tablet'})
+    event.shapeless(
+        Item.of('indigestion_tablet:indigestion_tablet', 4),
+        [
+            'minecraft:wheat',
+            'minecraft:sweet_berries',
+            'fruitsdelight:hawberry',
+            'minecraft:sugar'
+        ]
+    ).id('kubejs:indigestion_tablet')
 })

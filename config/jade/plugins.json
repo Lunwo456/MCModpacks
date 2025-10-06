@@ -90,6 +90,9 @@
     "cable_info": true,
     "parallel_info": true
   },
+  "collectorsreap": {
+    "crop_progress": true
+  },
   "jade": {
     "coordinates.rel": false,
     "distance": false,
@@ -134,9 +137,6 @@
     "recipe_logic_provider": true,
     "multiblock_provider": true
   },
-  "gtmthings": {
-    "wireless_energy_hatch_provider": true
-  },
   "mekanism": {
     "infuse_type": true,
     "gas": true,
@@ -154,6 +154,11 @@
   },
   "pipez": {
     "pipe": true
+  },
+  "delightful": {
+    "crop_progress": true,
+    "pie_icons": true,
+    "mushroom_colony": true
   },
   "twilightforest": {
     "quest_ram_wool": true
